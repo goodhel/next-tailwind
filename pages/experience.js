@@ -7,5 +7,5 @@ export default function experience() {
         <ContainerBlock title="Experience - Yudhi Kusuma">
             <Experience />
         </ContainerBlock>
-    )
+    );
 }

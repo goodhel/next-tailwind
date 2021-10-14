@@ -12,7 +12,7 @@ export default function Hero() {
 
             <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
                 <RoughNotationGroup show={true}>
-                    <RainbowHighlight color={colors[1]}>
+                    <RainbowHighlight color={colors[3]}>
                         <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
                         Back-End.
                         </h1>

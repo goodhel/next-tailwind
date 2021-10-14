@@ -4,7 +4,7 @@ const userData = {
     designation: "Back-End Developer",
     avatarUrl: "/avatar.jpg",
     email: "yudhie123@gmail.com",
-    phone: "085264854515",
+    phone: "+62 85226666877",
     address: "Wonogiri, Jawa Tengah, Indonesia",
     projects: [
       {

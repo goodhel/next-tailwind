@@ -48,7 +48,7 @@ export default function FavoriteProject() {
                             <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
                                 Tailwind Master Kit
                             </h1>
-                            <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+                            <h1 className="absolute bottom-10 left-10 text-red-500 font-bold text-xl">
                                 01
                             </h1>
                         </div>
@@ -70,7 +70,7 @@ export default function FavoriteProject() {
                         <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
                             PlaceholderTech
                         </h1>
-                        <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+                        <h1 className="absolute bottom-10 left-10 text-red-500 font-bold text-xl">
                             02
                         </h1>
                         </div>
@@ -91,7 +91,7 @@ export default function FavoriteProject() {
                         <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
                             Portfolio
                         </h1>
-                        <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+                        <h1 className="absolute bottom-10 left-10 text-red-500 font-bold text-xl">
                             03
                         </h1>
                         </div>

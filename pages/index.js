@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import ContainerBlock from '../components/ContainerBlock';
-import Hero from '../components/Hero';
-import FavoriteProject from '../components/FavoriteProject';
-import LastestCode from '../components/LastestCode';
-import getLatestRepos from '../services/getLatestRepo';
-import userData from '../constant/data';
+// import Head from 'next/head';
+// import styles from '../styles/Home.module.css';
+import ContainerBlock from '@components/ContainerBlock';
+import Hero from '@components/Hero';
+import FavoriteProject from '@components/FavoriteProject';
+import LastestCode from '@components/LastestCode';
+import getLatestRepos from '@services/getLatestRepo';
+import userData from '@constant/data';
 
 export default function Home({repositories}) {
   return (

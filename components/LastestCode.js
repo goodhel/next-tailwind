@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import userData from "../constant/data";
+import userData from "@constant/data";
 
 export default function LastestCode({repositories}) {
     const [repos, setRepos] = useState([]);

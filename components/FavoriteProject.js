@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import userData from "@constant/data";
 
 export default function FavoriteProject() {
     return (
@@ -32,71 +33,54 @@ export default function FavoriteProject() {
                 </header>
 
                 {/* Grid Start Here */}
-                <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
-                    {/* Single Card */}
-                    <a
-                        href="https://tailwindmasterkit.com"
-                        className="w-full block col-span-3 shadow-2xl"
-                        target="_blank"
-                    >
-                        <div className="relative rounded-md overflow-hidden">
-                            <img
-                                src="/tmk.jpg"
-                                alt="portfolio"
-                                className="transform hover:scale-125 transition duration-2000 ease-out"
-                            />
-                            <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                                Tailwind Master Kit
-                            </h1>
-                            <h1 className="absolute bottom-10 left-10 text-red-500 font-bold text-xl">
-                                01
-                            </h1>
-                        </div>
-                    </a>
-
-                    {/* Single Card */}
-                    <a
-                        href="https://placeholdertech.in"
-                        className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
-                        target="_blank"
-                    >
-                        <div className="relative rounded-md overflow-hidden">
-                        {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-                        <img
-                            src="/placeholdertech.png"
-                            alt="portfolio"
-                            className="transform hover:scale-125 transition duration-2000 ease-out"
-                        />
-                        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                            PlaceholderTech
-                        </h1>
-                        <h1 className="absolute bottom-10 left-10 text-red-500 font-bold text-xl">
-                            02
-                        </h1>
-                        </div>
-                    </a>
-                    {/* Single card */}
-                    <a
-                        href="https://manuarora.in"
-                        className="w-full block col-span-3 sm:col-span-1  object-cover"
-                        target="_blank"
-                    >
-                        <div className="relative rounded-md overflow-hidden shadow-2xl">
-                        {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-                        <img
-                            src="/portfolio.png"
-                            alt="portfolio"
-                            className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
-                        />
-                        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                            Portfolio
-                        </h1>
-                        <h1 className="absolute bottom-10 left-10 text-red-500 font-bold text-xl">
-                            03
-                        </h1>
-                        </div>
-                    </a>
+                <div className="grid md:grid-cols-2 gap-8 lg:-mt-8 pb-40">
+                    {userData.projects.slice(0,3).map((val, index) => (
+                        <ProjectContainer
+                            key={index}
+                            title={val.title}
+                            src={val.imgUrl}
+                            href={val.link}
+                            alt="test"
+                        ></ProjectContainer>
+                    ))}
                 </div>
+            </div>
+        </div>
+    );
+}
+
+const ProjectContainer = ({ title, src, alt, href }) => {
+    return (
+        <div className="rounded-md card project-card md:w-full ring-2 ring-vis-0 transform hover:scale-105 transition duration-2000 ease-out">
+            <div className="relative block h-full p-5 rounded-md ring-vis-0">
+                <header className="flex justify-between">
+                    <h3 className="font-semibold text-2xl text-gray-800 dark:text-gray-100">
+                        {title}
+                    </h3>
+                </header>
+                {/* <p className="text-gray-700 dark:text-gray-300">
+                    this is description
+                </p> */}
+                <div className="w-full shadow-md bg-red-500 mt-5">
+                    <div className="relative">
+                        <img
+                            src={src}
+                            alt={alt}
+                            className="object-cover h-full w-full shadow-2xl"
+                        />
+                    </div>
+                </div>
+                <a 
+                    href={href}
+                    className="flex flex-row items-center space-x-4 group"
+                    target="_blank"
+                >
+                    <div className="my-4 text-gray-500 dark:text-gray-400">&rarr;</div>
+                    <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
+                        <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
+                        View More
+                    </div>
+                </a>
             </div>
         </div>
     );
